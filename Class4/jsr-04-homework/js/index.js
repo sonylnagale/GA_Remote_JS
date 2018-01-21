@@ -14,12 +14,12 @@ function adoptDog() {
 	document.getElementById("addmore").className = "";
 	document.getElementById("done").className = "";
 
-	const select = document.getElementById("rescue");
-	const breed = select.options[select.selectedIndex].value;
+	var select = document.getElementById("rescue");
+	var breed = select.options[select.selectedIndex].value;
 
 	// add the dog message to the array
-	const name = names[generateRandomNumber(names.length)];
-	const gender = genders[generateRandomNumber(genders.length)];
+	var name = names[generateRandomNumber(names.length)];
+	var gender = genders[generateRandomNumber(genders.length)];
 	console.log("You've just adopted a new " + gender + " " + breed + " with the name " + name);
 	dogs.push(createDogObject(gender, breed, name));
 }
@@ -43,7 +43,7 @@ function generateRandomNumber(maxInt) {
 
 // add a click handler for the #selectDog button
 document.getElementById("formSubmit").onclick = function () {
-	dogs = [];
+	//dogs = [];
 	adoptHandler();
 };
 
